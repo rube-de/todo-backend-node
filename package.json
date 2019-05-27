@@ -1,0 +1,22 @@
+{
+  "name": "todo-backend-node",
+  "version": "1.0.0",
+  "description": "todo api with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rube-de/todo-backend-node.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Bernhard Ruf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rube-de/todo-backend-node/issues"
+  },
+  "homepage": "https://github.com/rube-de/todo-backend-node#readme"
+}
