@@ -31,3 +31,13 @@ export let getTodos = (req: Request, res: Response) => {
           res.send(err);
       })
   }
+
+  export let updateTodo = (req: Request, res: Response) => {
+    Todo.findOneAndUpdate({_id:req.params.todoId}, req.body, {new:true})
+    .then(function(foundTodo: TodoDocument | null){
+        res.json(foundTodo)
+    })
+    .catch(function(err){
+        res.send(err);
+    })
+}
