@@ -7,5 +7,6 @@ router.get("/api/todos", ApiController.getTodos);
 router.post("/api/todos", ApiController.postTodo);
 router.get("/api/todos/:todoId", ApiController.getTodoById);
 router.put("/api/todos/:todoId", ApiController.updateTodo);
+router.delete("/api/todos/:todoId", ApiController.deleteTodo);
 
 export default router;
