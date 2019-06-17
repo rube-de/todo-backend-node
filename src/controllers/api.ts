@@ -45,7 +45,7 @@ export let updateTodo = (req: Request, res: Response) => {
 export let deleteTodo = (req: Request, res: Response) => {
     Todo.remove({_id:req.params.todoId})
     .then(function(){
-        res.json()
+        res.json({message: 'We deleted it!'})
     })
     .catch(function(err){
         res.send(err);
