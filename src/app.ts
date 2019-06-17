@@ -5,6 +5,7 @@ import bluebird from "bluebird";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import routes from "./routes";
+import path from "path"
 
 const app: express.Application = express();
 
@@ -22,10 +23,12 @@ mongoose.connect(mongoUrl).then(
 app.set("port", process.env.PORT || 3000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname + "/../src/public")));
+app.use(express.static(path.join(__dirname, "/../src/views")));
 
 
 app.get('/', function(req: express.Request, res: express.Response) {
-    res.send("Hi there from express test!!!")
+    res.sendFile("index.html");
 })
 
 app.use("/", routes);
